@@ -9,7 +9,7 @@ const AppBar = styled.header`
 `
 
 const Container = styled.div`
-  width: min(100vw, 972px);
+  width: min(100vw - 40px, 972px);
   height: 100%;
   margin: auto;
   display: flex;

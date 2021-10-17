@@ -2,7 +2,35 @@ import type {NextPage} from 'next'
 import Head from 'next/head'
 import ProceedButton from "src/components/ProceedButton";
 import Header from "../src/components/Header";
+import styled from "@emotion/styled";
+import {Container} from "src/components/Container";
 import Tab from "../src/components/Tab";
+
+const H1 = styled.h1`
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 40px;
+`
+
+const H2 = styled.h2`
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: gray;
+  font-size: 18px;
+`
+
+const Tabs = styled.div`
+  display: flex;
+  flex-direction: row;
+  
+  > * {
+    margin-left: 20px;
+  }
+  
+  > :first-child {
+    margin-left: 0;
+  }
+`
 
 const Home: NextPage = () => {
     return (
@@ -13,7 +41,16 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <Header/>
-            <ProceedButton>Далее</ProceedButton>
+            <Container>
+                <H1>Оценка залогового имущества</H1>
+                <H2>Наш сервис помогает оценить недвижимость и автомобили</H2>
+                <Tabs>
+                    <Tab isActive step={1} title="Выбор типа имущества"/>
+                    <Tab step={1} title="Выбор типа имущества"/>
+                    <Tab step={1} title="Выбор типа имущества"/>
+                </Tabs>
+                <ProceedButton>Далее</ProceedButton>
+            </Container>
         </div>
     )
 }
