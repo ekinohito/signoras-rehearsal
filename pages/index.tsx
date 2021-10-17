@@ -5,6 +5,7 @@ import Header from "../src/components/Header";
 import styled from "@emotion/styled";
 import {Container} from "src/components/Container";
 import Tab from "../src/components/Tab";
+import TabPanel from "../src/components/TabPanel";
 
 const H1 = styled.h1`
   margin-top: 80px;
@@ -22,12 +23,13 @@ const H2 = styled.h2`
 const Tabs = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 24px;
   
   > * {
     margin-left: 20px;
   }
   
-  > :first-child {
+  > :first-of-type {
     margin-left: 0;
   }
 `
@@ -49,7 +51,7 @@ const Home: NextPage = () => {
                     <Tab step={1} title="Выбор типа имущества"/>
                     <Tab step={1} title="Выбор типа имущества"/>
                 </Tabs>
-                <ProceedButton>Далее</ProceedButton>
+                <TabPanel/>
             </Container>
         </div>
     )
